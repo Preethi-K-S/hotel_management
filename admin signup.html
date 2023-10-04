@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css"/>
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <title> admin signup</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgb(98, 205, 238),white);
+        }
+        .continer{
+            margin-left: 80px;
+            
+        }
+       .continer label{
+        font-size: large;
+       }
+       .continer input[type="text"],input[type="password"],input[type="date"]
+       {
+        width: 90%;
+         padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+        margin-right: 5px;
+        font-size: large;
+         border: 1px  solid grey;
+    
+        }
+        .continer input[type="text"]:focus{
+        background-color: rgb(223, 252, 252);
+
+         }
+         .continer textarea{
+         width: 90%;
+          height: 20vh;
+         padding: 5px;
+        font-size: large;
+         margin-top: 10px;
+         margin-bottom: 18px;
+       }
+        .continer textarea:focus{
+       background-color: rgb(223, 252, 252);
+      }
+     .continer select{
+    width: 90%;
+    height: 8vh;
+    padding: 3px;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 20px;
+     }
+.continer select:focus{
+    background-color: rgb(223, 252, 252);
+}
+.continer input[type="submit"]{
+    width: 90%;
+    height: 50px;
+   margin-left: 1px;
+   background-color: green;
+}
+.continer input[type="checkbox"]{
+       font-size: large;
+       margin-bottom: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="continer">
+       
+        <h1 style="margin-bottom: 20px; margin-left: 420px;"><b>ADMIN REGISTER</b></h1>
+        <label for="name">ENTER FIRST NAME :</label><br>
+        <input type="text" id="name" placeholder="Enter First name"><br>
+        <span id="nameError" style="color: red; "></span><br>
+        <label for="name1">ENTER LAST NAME :</label><br>
+        <input type="text" id="name1" placeholder="Enter last name"><br>
+        <span id="nameError1" style="color: red; "></span><br>
+        <label for="name2">ENTER EMAIL ID :</label><br>
+        <input type="text" id="name2" placeholder="Enter Email id"><br>
+        <span id="nameError2" style="color: red; "></span><br>
+        <label for="psd">ENTER PASSWORD :</label><br>
+        <input type="password" id="psd" placeholder="Enter password"><br>
+        <span id="psdError" style="color: red;"></span><br>
+        <label for="psd1">ENTER CONFIRM PASSWORD :</label><br>
+        <input type="password" id="psd1" placeholder="Enter confirm password"><br>
+        <span id="psd1Error" style="color: red;"></span><br>
+        <p style="font-size: large;">SELECT YOUR GENDER:</p>
+         <input type="radio" id="me" name="gender">
+         <label for="me">male</label><br>
+         <input type="radio" id="fe" name="gender">
+         <label for="fe">female</label><br>
+         <input type="radio" id="tg" name="gender">
+         <label for="tg">others</label><br>
+         <label for="birth">ENTER YOUR DATE OF BIRTH:</label><br>
+         <input type="date" id="birth" ><br>
+         <label for="area">Select Your LOCATION :</label><br>
+         <select id="area">
+        <option value="1">Yercaud</option>
+        <option value="2">5roads</option>
+        <option value="3">new bus stand</option>
+        <option value="4">old bus stand</option>
+      </select><br>
+      <label for="address">Enter Your Address</label><br>
+      <textarea id="address" placeholder="Enter  your address"></textarea><br>
+      <input type="checkbox" id="check">
+      <label for="check">confirm above information</label><br>
+      <input type="submit" onclick="validateForm()" value="Submit">
+         </div>
+         <script>
+            function validateForm() {
+      var nameInput = document.getElementById("name");
+      var name1Input = document.getElementById("name1");
+      var name2Input = document.getElementById("name2");
+      var psdInput = document.getElementById("psd");
+      var psd1Input = document.getElementById("psd1");
+      var nameError = document.getElementById("nameError");
+      var nameError1 = document.getElementById("nameError1");
+      var nameError2 = document.getElementById("nameError2");
+      var psdError = document.getElementById("psdError");
+      var psd1Error = document.getElementById("psd1Error");
+      var name = nameInput.value.trim();
+      var name1 = name1Input.value.trim();
+      var name2 = name2Input.value.trim();
+      var psd = psdInput.value.trim();
+      var psd1 = psd1Input.value.trim();
+    
+    
+      nameError.textContent = "";
+      nameError1.textContent = "";
+      nameError2.textContent = "";
+      psdError.textContent = "";
+      psd1Error.textContent = "";
+      
+    
+      if (name === "") {
+        nameError.textContent = "Firstname is required.";
+        return false;
+      }
+      if (name1 === "") {
+        nameError1.textContent = "Lastname is required.";
+        return false;
+      }
+      if (name2 === "") {
+        nameError2.textContent = "Email is required.";
+        return false;
+      }
+    
+      if (psd === "") {
+        psdError.textContent = "Password is required.";
+        return false;
+      }
+      if (psd1 === "") {
+        psd1Error.textContent = " Confirm Password is required.";
+        return false;
+      }
+      if (psd !== psd1) {
+        psd1Error.textContent = " Password not match .";
+        return false;
+      }
+      
+    
+    
+    }
+    
+        </script>
+    
+       
+    
+</body>
+</html>

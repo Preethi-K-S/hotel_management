@@ -1,0 +1,164 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.nav {
+    
+    padding: 3px;
+}
+
+.zoom-image {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .zoom-image img {
+    transition: transform 0.3s;
+  }
+
+  .zoom-image:hover img {
+    transform: scale(1.2);
+  }
+  .service-box {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .service-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-box.zoomed {
+    transform: scale(1.2);
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+.home2 img{
+    width: 100%;
+    height: 700px;
+}
+ .home2 {
+    position: relative;
+
+}
+ .home2 .content{
+    position: absolute;
+    left: 20px;
+    top:190px;
+}
+ .home2 .content h1{
+text-align: right;
+
+}
+ .home2 .content p{
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+  
+.about .box{
+  
+   margin-left: 40px;
+    width: 80%;
+    margin-top: 90px;
+   
+}
+input[type="submit"] {
+    font-size: larger;
+    margin-left: 20px;
+    padding: 6px 10px 6px 10px;
+    background-color: green;
+    border-radius: 5px;
+
+}
+input[type="submit"]:hover {
+    background-color:rgb(35, 35, 107);
+  }
+  input[type="number"] {
+    margin-left: 5px;
+    padding: 1px;
+  }
+#payment label{
+    font-size: larger;
+    
+}
+#payment input[type="text"],input[type="date"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    border: 1px  solid grey;
+    
+}
+#payment input[type="text"]:focus{
+    background-color: rgb(223, 252, 252);
+}
+#payment input[type="date"]:focus{
+    background-color: rgb(223, 252, 252);
+}
+#payment textarea{
+    width: 100%;
+    height: 20vh;
+    padding: 5px;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+#payment textarea:focus{
+    background-color: rgb(223, 252, 252);
+}
+#payment select{
+    width: 100%;
+    height: 8vh;
+    padding: 3px;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#payment select:focus{
+    background-color: rgb(223, 252, 252);
+}
+#payment input[type="submit"]{
+    width: 100%;
+   margin-left: 1px;
+}
+#menu input[type="number"]{
+  margin-left: 25px;
+  width: 90px;
+  padding: 4px;
+  text-align: center;
+}
+#special input[type="number"]{
+  margin-left: 25px;
+  width: 90px;
+  padding: 4px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  transition: transform 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.0);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+.zoom-card {
+  transition: transform 0.3s;
+}
+
+.zoom-card:hover {
+  transform: scale(1.1);
+}
